@@ -22,8 +22,13 @@ public class Main : MonoBehaviour {
 
     public static int itemCount = 0;
 
-	// Use this for initialization
-	void Start () {
+    public Transform Field;
+    public GameObject[] tile;
+    public Material gomMaterial;
+    public PhysicMaterial gomPhysicMaterial;
+
+    // Use this for initialization
+    void Start () {
         gameState = GameState.Play;
         itemCount = 0;
         for(int i = 0; i < 100; i++) {
@@ -32,6 +37,33 @@ public class Main : MonoBehaviour {
             items.transform.position = v;
         }
         resultPanel.SetActive(false);
+
+        //int count = 0;
+        //foreach(Transform child in Field) {
+        //    tile[count] = child.gameObject;
+        //    count++;
+        //}
+        int[] gom = new int[3];
+        bool ok = true;
+        for(int i = 0; i < gom.Length; i++) {
+            ok = true;
+            gom[i] = Random.Range(0, tile.Length);
+            for(int j = 0; j < i; j++) {
+                if(gom[j] == gom[i]) {
+                    ok = false;
+                    break;
+                }
+            }
+
+            if(ok) {
+                tile[gom[i]].SetActive(true);
+                tile[gom[i]].GetComponent<Renderer>().material = gomMaterial;
+                tile[gom[i]].GetComponent<Collider>().material = gomPhysicMaterial;
+            }
+            else {
+                i--;
+            }
+        }
     }
 	
 	// Update is called once per frame

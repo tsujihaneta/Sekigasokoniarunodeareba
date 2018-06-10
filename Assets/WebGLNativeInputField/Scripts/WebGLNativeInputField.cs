@@ -10,9 +10,9 @@ public class WebGLNativeInputField : UnityEngine.UI.InputField
         PromptPopup,
         OverlayHtml,
     }
-    public string m_DialogTitle = "Input Text";
-    public string m_DialogOkBtn = "OK";
-    public string m_DialogCancelBtn = "Cancel";
+    public string m_DialogTitle = "名前を入力してください";
+    public string m_DialogOkBtn = "決定";
+    public string m_DialogCancelBtn = "やめる";
     public EDialogType m_DialogType = EDialogType.OverlayHtml;
 
 #if UNITY_WEBGL && !UNITY_EDITOR 

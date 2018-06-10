@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/naichilab/unity-simple-ranking/Scenes/Ranking.unity
+- path: Assets/Scenes/Main.unity
   isLoaded: 1
   isActive: 1
