@@ -59,6 +59,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\naichilab\unityroom-tweet\Sample\Scripts\TweetSample.cs" />
+    <Compile Include="Assets\naichilab\unityroom-tweet\Scripts\UnityRoomTweet.cs" />
     <Compile Include="Assets\naichilab\unity-simple-ranking\Sample\SampleSceneManager.cs" />
     <Compile Include="Assets\naichilab\unity-simple-ranking\Scripts\IScore.cs" />
     <Compile Include="Assets\naichilab\unity-simple-ranking\Scripts\NcmbYieldableExtensions.cs" />

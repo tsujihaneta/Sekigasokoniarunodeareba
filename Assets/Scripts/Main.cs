@@ -117,7 +117,8 @@ public class Main : MonoBehaviour {
     }
 
     public void OnClickTweetButton() {
-        string shareText = "↓クソゲープレイ結果↓" + "\nジョッキを" + itemCount + "杯飲んだ！" + "\n評価：" + resultMessage;
-        Application.OpenURL("http://twitter.com/intent/tweet?text=" + WWW.EscapeURL(shareText + "\n\n" + "#席がそこにあるのであれば"));
+        string shareText = "↓クソゲープレイ結果↓" + "\nジョッキを" + itemCount + "杯飲んだ！" + "\n評価：" + resultMessage + "\n";
+        //Application.OpenURL("http://twitter.com/intent/tweet?text=" + WWW.EscapeURL(shareText + "\n\n" + "#席がそこにあるのであれば"));
+        naichilab.UnityRoomTweet.Tweet("sekigasokoniarunonaraba", shareText, "unityroom", "unity1week", "席がそこにあるのであれば");
     }
 }
