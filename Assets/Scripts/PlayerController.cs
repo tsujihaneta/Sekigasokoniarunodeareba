@@ -17,31 +17,38 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(Input.GetKeyDown(KeyCode.UpArrow)) {
+        if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) {
             a.Play("Front");
-            rb.AddForce(-transform.forward * thrust * ((Main.itemCount + 1) * 0.5f));
+            Vector3 v = transform.forward * (thrust + Main.itemCount * 10);
+            v *= -1;
+            rb.AddForce(v);
             audioSource.clip = slide;
             audioSource.Play();
         }
-        if(Input.GetKeyDown(KeyCode.DownArrow)) {
+        if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) {
             a.Play("Back");
-            rb.AddForce(transform.forward * thrust);
+            Vector3 v = transform.forward * (thrust + Main.itemCount * 10);
+            rb.AddForce(v);
             audioSource.clip = slide;
             audioSource.Play();
         }
-        if(Input.GetKey(KeyCode.LeftArrow)) {
+        if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) {
             a.Play("Left");
-            rb.AddTorque(-transform.up * torque * ((Main.itemCount + 1) * 0.5f));
+            Vector3 v = transform.up * (torque + Main.itemCount * 10);
+            v *= -1;
+            rb.AddTorque(v);
         }
-        if(Input.GetKeyDown(KeyCode.LeftArrow)) {
+        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) {
+            a.Play("Right");
+            Vector3 v = transform.up * (torque + Main.itemCount * 10);
+            rb.AddTorque(v);
+        }
+
+        if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) {
             audioSource.clip = rotation;
             audioSource.Play();
         }
-        if(Input.GetKey(KeyCode.RightArrow)) {
-            a.Play("Right");
-            rb.AddTorque(transform.up * torque);
-        }
-        if(Input.GetKeyDown(KeyCode.RightArrow)) {
+        if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) {
             audioSource.clip = rotation;
             audioSource.Play();
         }
@@ -55,7 +62,7 @@ public class PlayerController : MonoBehaviour {
         if(other.tag == "Item") {
             Destroy(other.gameObject);
             Main.itemCount++;
-            rb.mass *= 0.8f;
+            rb.mass *= 0.9f;
 
             audioSource.clip = get;
             audioSource.Play();
