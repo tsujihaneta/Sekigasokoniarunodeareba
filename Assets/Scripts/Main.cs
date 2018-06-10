@@ -42,6 +42,7 @@ public class Main : MonoBehaviour {
         }
 
 		if(gameState == GameState.Over) {
+
             resultPanel.SetActive(true);
             countText.text = "ジョッキ：" + itemCount + "杯";
 
@@ -67,6 +68,11 @@ public class Main : MonoBehaviour {
             messageText.text = resultMessage;
         }
 	}
+
+    public void OnClickHighScoreButton() {
+        // Type == Number の場合
+        naichilab.RankingLoader.Instance.SendScoreAndShowRanking(itemCount);
+    }
 
     public void OnClickRule() {
         rulePanel.SetActive(!isOpenRule);

@@ -60,6 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Standard Assets\Utility\SmoothFollow.cs" />
+    <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\res\values\version.xml" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/SHO/Documents/Unity Project/Sekigasokoniarunodeareba/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
