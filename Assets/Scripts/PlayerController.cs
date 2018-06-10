@@ -45,12 +45,21 @@ public class PlayerController : MonoBehaviour {
         }
 
         if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) {
+            a.Play("LeftStart");
             audioSource.clip = rotation;
             audioSource.Play();
         }
         if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) {
+            a.Play("RightStart");
             audioSource.clip = rotation;
             audioSource.Play();
+        }
+
+        if(Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A)) {
+            a.Play("Default");
+        }
+        if(Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D)) {
+            a.Play("Default");
         }
     }
 
