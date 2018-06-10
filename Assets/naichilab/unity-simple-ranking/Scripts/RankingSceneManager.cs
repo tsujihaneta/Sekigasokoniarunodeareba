@@ -42,10 +42,10 @@ namespace naichilab
 		/// <value>The name of the inputted.</value>
 		private string InputtedNameForSave {
 			get {
-				if (string.IsNullOrEmpty (this.nameInputField.text + "メンバー")) {
+				if (string.IsNullOrEmpty (this.nameInputField.text)) {
 					return "名無し";
 				}
-				return this.nameInputField.text + "メンバー";
+				return this.nameInputField.text;
 			}
 		}
 
@@ -176,7 +176,7 @@ namespace naichilab
 					var n = Instantiate (this.rankingNodePrefab, scrollViewContent);
 					var rankNode = n.GetComponent<RankingNode> ();
 					rankNode.NoText.text = (++rank).ToString ();
-					rankNode.NameText.text = r ["name"].ToString ();
+					rankNode.NameText.text = r ["name"].ToString () + "メンバー";
 
 					var s = RankingLoader.Instance.BuildScore (r ["hiscore"].ToString ());
 					rankNode.ScoreText.text = s != null ? s.TextForDisplay : "エラー";

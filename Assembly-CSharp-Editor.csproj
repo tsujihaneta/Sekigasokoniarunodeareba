@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Assets\Editor\NCMBMenu.cs" />
     <Compile Include="Assets\Editor\UpdateXcodeProject.cs" />
+    <Compile Include="Assets\WebGLNativeInputField\Editor\WebGLNativeInputFieldEditor.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/SHO/Documents/Unity Project/Sekigasokoniarunodeareba/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

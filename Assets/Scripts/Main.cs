@@ -86,6 +86,6 @@ public class Main : MonoBehaviour {
 
     public void OnClickTweetButton() {
         string shareText = "↓クソゲープレイ結果↓" + "\nジョッキを" + itemCount + "杯飲んだ！" + "\n評価：" + resultMessage;
-        Application.OpenURL("http://twitter.com/intent/tweet?text=" + WWW.EscapeURL(shareText + "\n\n" + "#席がそこにあるのならば"));
+        Application.OpenURL("http://twitter.com/intent/tweet?text=" + WWW.EscapeURL(shareText + "\n\n" + "#席がそこにあるのであれば"));
     }
 }
