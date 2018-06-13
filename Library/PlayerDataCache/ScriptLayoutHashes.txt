@@ -1,6 +1,6 @@
-WebGL
+Android
 PlayerPath?
-C:/Users/SHO/Desktop/Sekigasokoniarunodeareba_WebGL
+C:/Users/SHO/Documents/Unity Project/Sekigasokoniarunodeareba/Sekigasokoniarunodeareba.apk
 SceneListBegin?
 Assets/Scenes/Title.unity
 Assets/Scenes/Main.unity
@@ -293,3 +293,4 @@ a924c90a95cf65003f662aa5e30abb6b Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 e0969be4db61a9864439230a37658d83 Assembly-CSharp.dll:naichilab.RankingLoader
+5bcd020eedba5edab8e19a6c81888684 Assembly-CSharp.dll:.AdMob
